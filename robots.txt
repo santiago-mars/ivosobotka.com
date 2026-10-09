@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /sperky/
+Disallow: /schuzka/
+Sitemap: https://ivosobotka.com/sitemap.xml
