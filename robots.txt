@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ivosobotka.com/sitemap.xml
