@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PiCCOLO: podklady pro obchodníka</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E0E0E;--paper:#F5F5F2;--white:#fff;--g1:#9A9A9A;--g2:#6B6B6B;--line:#D8D8D4;--line-d:#2A2A2A;--display:"Space Grotesk",system-ui,sans-serif;--text:Inter,system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+header{background:var(--ink);color:var(--paper);padding:clamp(20px,3vw,28px) 0 clamp(150px,22vw,260px)}
+.top{display:flex;justify-content:space-between;gap:16px;font-family:var(--display);font-weight:500;font-size:14px;color:var(--g1)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,6vw,64px);line-height:1.02;letter-spacing:-.02em;margin-top:clamp(36px,6vw,64px)}
+h1 span{color:var(--g1)}
+.lead{margin-top:16px;max-width:46ch;color:#cfcfcb;font-size:clamp(16px,1.8vw,19px)}
+.video{margin-top:calc(-1 * clamp(130px,20vw,240px));position:relative}
+video{display:block;width:100%;aspect-ratio:16/9;background:#000;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:12px;font-size:14px;color:var(--g2)}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(24px,3vw,32px);letter-spacing:-.01em;margin:clamp(48px,7vw,80px) 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.dl{display:flex;flex-direction:column;justify-content:space-between;gap:18px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;min-height:170px;transition:border-color .15s,transform .15s}
+.dl:hover{border-color:var(--ink);transform:translateY(-2px)}
+.dl.main{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.dl h3{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.2}
+.dl p{font-size:14px;color:var(--g2);margin-top:6px}
+.dl.main p{color:var(--g1)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:15px}
+.btn small{font-family:var(--text);font-weight:400;color:var(--g2);font-size:13px}
+.dl.main .btn small{color:var(--g1)}
+.btn i{display:inline-block;width:30px;height:30px;border-radius:50%;background:var(--ink);position:relative;flex:none}
+.dl.main .btn i{background:var(--paper)}
+.btn i:after{content:"";position:absolute;left:50%;top:44%;width:8px;height:8px;border-right:2px solid var(--paper);border-bottom:2px solid var(--paper);transform:translate(-50%,-50%) rotate(45deg)}
+.dl.main .btn i:after{border-color:var(--ink)}
+.steps{list-style:none;counter-reset:s;border-top:1px solid var(--line)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;padding:14px 0;border-bottom:1px solid var(--line)}
+.steps li:before{content:counter(s,decimal-leading-zero);font-family:var(--display);font-weight:700;color:var(--g1)}
+.odkaz{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:16px}
+.pole{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px 16px}
+.pole label{display:grid;gap:6px;font-size:13px;color:var(--g2)}
+.pole select,.pole input[type=number]{font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:10px}
+.doplnky{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:15px}
+.doplnky label{display:flex;gap:8px;align-items:center;cursor:pointer}
+.vysl{display:grid;gap:10px}
+.vysl output{display:block;font-family:ui-monospace,Menlo,monospace;font-size:12px;word-break:break-all;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px}
+.akce{display:flex;flex-wrap:wrap;gap:10px}
+.akce button,.akce a{font-family:var(--display);font-weight:700;font-size:15px;border-radius:999px;padding:10px 18px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;text-decoration:none}
+.akce a{background:transparent;color:var(--ink)}
+footer{margin-top:clamp(56px,8vw,96px);padding:28px 0 40px;border-top:1px solid var(--line);font-size:13px;color:var(--g2)}
+@media (max-width:560px){.top span:last-child{display:none}.grid{grid-template-columns:1fr}.dl{min-height:0}video{border-radius:10px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top"><span>Ivo Sobotka &amp; tým</span></div>
+    <h1>Jak volat poptávky <span>PiCCOLO</span></h1>
+  </div>
+</header>
+<main class="wrap">
+  <div class="video">
+    <video controls playsinline preload="metadata" poster="soubory/nahled.jpg">
+      <source src="soubory/PiCCOLO-zaskoleni-obchodnika.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <h2>Odkaz na objednávku</h2>
+  <form class="odkaz" id="odkaz" onsubmit="return false">
+    <div class="pole">
+      <label>Obchodník<select id="o-kdo"><option value="martin|cs|poptavky-cz|+420733120085">Martin (česky)</option><option value="david|vi|poptavky-vn|+420792333672">David (vietnamsky)</option><option value="ivo|cs|poptavky-cz|+420733120085">Ivo (česky)</option><option value="ivo|vi|poptavky-vn|+420792333672">Ivo (vietnamsky)</option></select></label>
+      <label>Nabídka (pole nabidka v CRM)<select id="o-nab"><option value="n1|PC26-G7K">n1: do 2 dnů + garance</option><option value="n3|PC26-T9R">n3: 30 dní za 1 Kč</option><option value="n2|PC26-M4W">n2: 6 měsíců zdarma (jen roční Plus, do 6. 12.)</option></select></label>
+      <label>Zařízení<select id="o-hw"><option value="300022">PiCCOLO GO 10</option><option value="300024">PiCCOLO D3 15"</option><option value="300029">Vlastní Android</option><option value="300039">Pokladna a terminál 2 v 1</option></select></label>
+      <label>Licence<select id="o-lic"><option value="300008">Plus</option><option value="300007">Classic</option><option value="300011">PRO</option></select></label>
+      <label>Platba licence<select id="o-obd"><option value="rocne">Ročně</option><option value="mesicne">Měsíčně</option></select></label>
+      <label>Nastavení<select id="o-nast"><option value="302028">Komfortní</option><option value="302030">Komfortní na provozovně (3 400 Kč, jen GO 10)</option><option value="302027">Úvodní</option><option value="">Žádné</option></select></label>
+      <label>Počet pokladen<input type="number" id="o-ks" min="1" max="20" value="1"></label>
+    </div>
+    <div class="doplnky">
+      <label><input type="checkbox" value="301024" checked> Tiskárna 58 mm</label>
+      <label><input type="checkbox" value="301026"> Zásuvka + tiskárna</label>
+      <label><input type="checkbox" value="301027"> Mini tiskárna</label>
+      <label><input type="checkbox" value="301025"> Zásuvka</label>
+      <label><input type="checkbox" value="500027"> Čtečka kódů</label>
+    </div>
+    <div class="vysl">
+      <output id="o-url"></output>
+      <div class="akce"><button type="button" id="o-kopie">Zkopírovat odkaz</button><a id="o-otevrit" href="#" target="_blank" rel="noopener">Otevřít</a></div>
+    </div>
+  </form>
+  <script>
+  (function(){
+    var f=document.getElementById('odkaz'),out=document.getElementById('o-url'),ot=document.getElementById('o-otevrit');
+    function v(id){return document.getElementById(id).value}
+    function stav(){
+      var kdo=v('o-kdo').split('|'),nab=v('o-nab').split('|'),hw=v('o-hw'),dop=[];
+      f.querySelectorAll('.doplnky input:checked').forEach(function(c){dop.push(c.value)});
+      var nast=v('o-nast');
+      if(nast)dop.push(nast);
+      var q=new URLSearchParams({lic:v('o-lic'),obdobi:v('o-obd'),hw:hw});
+      if(dop.length)q.set('dop',dop.join(','));
+      var ks=Math.min(20,Math.max(1,parseInt(v('o-ks'),10)||1)); if(ks>1)q.set('ks',ks);
+      if(nab[0]==='n2'){document.getElementById('o-lic').value='300008';document.getElementById('o-obd').value='rocne';q.set('lic','300008');q.set('obdobi','rocne');}
+      q.set('promo',nab[1]);q.set('jazyk',kdo[1]);q.set('tel',kdo[3]);q.set('acquiring','1');
+      q.set('nabidka',nab[0]);q.set('kanal','obchodnik');q.set('utm_source','obchodnik');q.set('utm_medium','telefon');
+      q.set('utm_campaign',kdo[2]);q.set('utm_content',kdo[0]);
+      q.set('poznamka',nab[1]+'-'+(kdo[1]==='vi'?'D':'M'));
+      var u='https://pokladna-piccolo.cz/home/koupit?'+q.toString().replace(/%2C/g,',');
+      out.textContent=u;ot.href=u;return u;
+    }
+    f.addEventListener('change',stav);f.addEventListener('input',stav);stav();
+    document.getElementById('o-kopie').addEventListener('click',function(){
+      var b=this,u=stav();
+      (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){b.textContent='Zkopírováno';setTimeout(function(){b.textContent='Zkopírovat odkaz'},1500)}).catch(function(){window.prompt('Zkopíruj odkaz:',u)});
+    });
+  })();
+  </script>
+
+  <h2>Plus, nebo Pro?</h2>
+  <ol class="steps">
+    <li><div><b>Výchozí je Plus.</b> Stačí na prodej po skupinách zboží i na tlačítko pro každý výrobek (kavárna, pekárna, večerka).</div></li>
+    <li><div><b>Pro nabídni, když chce vést sklad:</b> zapisovat dodávky (příjemky), dělat inventury a vidět v pokladně, kolik čeho zbývá. Navíc umí marži na účtenkách a úpravu mapy stolů.</div></li>
+    <li><div><b>Komu:</b> větší prodejně, květinářství nebo obchodu, který chce přehled o každé položce, podniku se stoly. Večerkám většinou Plus, ale když zákazník sám chce sklad, prodej mu Pro a nerozmlouvej mu to.</div></li>
+    <li><div><b>Jak to říct:</b> „Když chcete jen prodávat a vidět tržby, stačí Plus. Když chcete vidět, kolik čeho máte na skladě, vezměte Pro.“ Pro stojí 542 Kč měsíčně při roční platbě, 678 Kč při měsíční.</div></li>
+    <li><div><b>Kdy to není pro PiCCOLO:</b> tisíce položek s detailní evidencí, věrnostní systém, složité nastavení na míru. Zapiš do CRM „PŘEDAT DATONĚ:“. Má dobrý počítač s Windows? Jde i čistě softwarová verze, cenu ověř u manažera.</div></li>
+    <li><div><b>Nevíš odpověď?</b> Neimprovizuj: „Ověřím to a zavolám vám zpátky.“ Zapiš otázku do CRM a zjisti ji u manažera. A drž to jednoduché: doporuč jednu sestavu.</div></li>
+  </ol>
+
+  <h2>Ke stažení</h2>
+  <div class="grid">
+    <a class="dl main" href="soubory/PiCCOLO-prirucka-obchodnika.pdf" download><div><h3>Příručka obchodníka</h3><p>Produkt, ceník, objednávka, CRM.</p></div><span class="btn"><i></i>Stáhnout PDF <small>430 kB</small></span></a>
+    <a class="dl" href="soubory/PiCCOLO-skript-hovoru-cesky.pdf" download><div><h3>Skript hovoru česky</h3><p>Hovor krok za krokem.</p></div><span class="btn"><i></i>Stáhnout PDF <small>297 kB</small></span></a>
+    <a class="dl" href="soubory/PiCCOLO-skript-hovoru-vietnamsky.pdf" download><div><h3>Skript hovoru vietnamsky</h3><p>S českým překladem.</p></div><span class="btn"><i></i>Stáhnout PDF <small>392 kB</small></span></a>
+    <a class="dl" href="soubory/PiCCOLO-follow-up-a-zpravy.pdf" download><div><h3>Follow-up a zprávy</h3><p>Kdy volat znovu, hotové zprávy CZ i VN.</p></div><span class="btn"><i></i>Stáhnout PDF <small>218 kB</small></span></a>
+    <a class="dl" href="soubory/PiCCOLO-tahak-k-telefonu.pdf" download><div><h3>Tahák k telefonu</h3><p>Jedna strana k telefonu.</p></div><span class="btn"><i></i>Stáhnout PDF <small>222 kB</small></span></a>
+    <a class="dl" href="soubory/PiCCOLO-podklady-obchodnika.zip" download><div><h3>Všechno najednou</h3></div><span class="btn"><i></i>Stáhnout ZIP <small>932 kB</small></span></a>
+    <a class="dl" href="soubory/PiCCOLO-zaskoleni-obchodnika.mp4" download><div><h3>Video ke stažení</h3></div><span class="btn"><i></i>Stáhnout MP4 <small>11,8 MB</small></span></a>
+  </div>
+</main>
+</body>
+</html>

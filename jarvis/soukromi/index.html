@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jarvis – ochrana soukromí — Ivo Sobotka &amp; tým</title>
+<meta name="theme-color" content="#0E0E0E">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=202610092134">
+</head>
+<body>
+<header class="page-head dark">
+  <div class="topbar">
+    <a href="/" style="color:#9A9A9A;border-bottom-color:#2A2A2A">Ivo Sobotka &amp; tým</a>
+    <span>/jarvis/soukromi</span>
+  </div>
+  <h1 style="margin-top:clamp(40px,6vw,72px)">Jarvis – ochrana soukromí</h1>
+</header>
+<main class="section light">
+  <div class="prose">
+    <p>Správcem osobních údajů je Ivo Sobotka, Jeronýmova 1155, 397 01 Písek, IČO 21868069. Kontakt: <a href="mailto:ivo@ivosobotka.com">ivo@ivosobotka.com</a>, +420 775 014 602.</p>
+
+    <h2>Komu je aplikace určená</h2>
+    <p>Jarvis je interní aplikace pro Iva Sobotku a lidi z jeho týmu. Přihlásit se lze jen na pozvánku a každé zařízení musí být schválené.</p>
+
+    <h2>Jaké údaje zpracováváme a proč</h2>
+    <p><strong>Účet:</strong> jméno a pozvaný pracovní e-mail (přihlášení přes Google nebo přes Apple — u Apple jen identifikátor účtu, e-mail z Applu neukládáme), role v týmu a klienti, ke kterým máte přístup. Slouží k přihlášení a k tomu, abyste viděli jen to, co vidět smíte.</p>
+    <p><strong>Telefon:</strong> číslo, které po prvním přihlášení můžete zadat (krok jde přeskočit) — pro přihlášení do GoHighLevelu a spárování s WhatsAppem.</p>
+    <p><strong>Zařízení:</strong> název a model zařízení, veřejné klíče, jimiž se zařízení prokazuje (soukromé klíče zařízení nikdy neopustí), a token pro doručení upozornění. Slouží k zabezpečení účtu.</p>
+    <p><strong>Hovory a zprávy:</strong> co Jarvisovi řeknete nebo napíšete, jeho odpovědi a fotky nebo soubory, které mu sami pošlete. Hlas jde přes server provozovatele do Google Gemini (hlasový hovor v reálném čase) nebo do ElevenLabs (převod řeči na text a zpět); odpovědi a práci s podklady připravují jazykové modely Anthropic Claude a Google Gemini. Slouží jen k tomu, aby vám Jarvis odpověděl a udělal, o co ho požádáte. Data se těmto službám posílají až po vašem souhlasu na obrazovce „Jarvis a AI“ při prvním spuštění; souhlas můžete kdykoli odvolat v aplikaci (Účet → Soukromí) a Jarvis se tím zastaví.</p>
+    <p><strong>Přepisy a nahrávky hovorů:</strong> přepis každého hovoru a jeho zvuková nahrávka se ukládají na serveru provozovatele (u hovorů přes ElevenLabs i u ElevenLabs), abyste mohli na hovor navázat a aby se zlepšoval přepis řeči. Hovory ukázkového účtu pro kontrolu Applem se neukládají.</p>
+    <p><strong>Poznávání hlasu:</strong> jen pokud v aplikaci souhlasíte. Otisk hlasu se spočítá a uloží jen ve vašem zařízení a jde kdykoli smazat (Účet → Hlas); na server jdou jen čísla o shodě hlasu, nikdy zvuk ani otisk.</p>
+    <p><strong>Rozbor prodejních hovorů:</strong> u obchodníků přepisy jejich prodejních hovorů z nástroje agentury pro schůzky, ze kterých Jarvis připraví zpětnou vazbu.</p>
+    <p><strong>Online schůzky:</strong> když Jarvise pozvete na online schůzku, připojí se jako účastník přes službu Recall.ai. Ta pro nás zpracuje zvuk a přepis schůzky, ze kterých Jarvis připraví shrnutí. Na schůzku se Jarvis dostane jen tehdy, když ho hostitel pustí.</p>
+    <p><strong>Upozornění:</strong> oznámení do telefonu, hodinek a počítače doručuje služba Apple Push Notification (Apple). Obsahují jen krátký text upozornění.</p>
+    <p><strong>Provozní údaje:</strong> délka a rychlost hovorů, chyby spojení a stav zvuku (bez obsahu hovoru) — k opravám a zajištění kvality.</p>
+    <p><strong>Bezpečnostní deník:</strong> kdy a z jakého zařízení proběhlo přihlášení nebo citlivá akce. Slouží k ochraně účtu a dat klientů.</p>
+    <p><strong>Poloha a kontakty:</strong> jen u účtu provozovatele v iPhonu (poloha jen během hovoru — doprava, počasí; kontakty pro volání a ukládání čísel). U ostatních uživatelů se poloha ani kontakty nezpracovávají.</p>
+    <p>Aplikace nepoužívá reklamní identifikátory ani analytické nástroje třetích stran, nesleduje vás napříč aplikacemi a údaje nikomu neprodáváme ani je nepoužíváme k reklamě. Právním základem je plnění spolupráce, váš souhlas (AI služby, poznávání hlasu) a náš oprávněný zájem na bezpečném provozu.</p>
+
+    <h2>Kde údaje jsou</h2>
+    <p>Účty a oprávnění jsou na serveru u poskytovatele Railway (USA), hovory a pracovní data na serveru provozovatele v České republice. Aplikace se k serveru provozovatele připojuje přes síť Tailscale; spojení je šifrované až na server a Tailscale jeho obsah nevidí. Zpracovatelé (Railway, Google, ElevenLabs, Anthropic, Recall.ai, Apple pro přihlášení a doručení upozornění, Tailscale pro spojení) údaje zpracovávají jen pro nás, podle smluv o zpracování, se stejnou úrovní ochrany, jakou popisují tyto zásady, a při přenosu mimo EU podle standardních smluvních doložek. Zálohy jsou šifrované.</p>
+
+    <h2>Jak dlouho</h2>
+    <p>Účet, zařízení, přepisy a nahrávky hovorů po dobu spolupráce. Po smazání účtu nebo skončení spolupráce přístup hned zrušíme a ostatní údaje smažeme do 30 dnů, pokud je nemusíme uchovat ze zákona. Bezpečnostní deník uchováváme po dobu nutnou k ochraně účtů a dat klientů.</p>
+
+    <h2>Smazání účtu a odvolání souhlasu</h2>
+    <p>Účet smažete přímo v aplikaci: Účet → Smazat účet (v iPhonu se Účet otevře podržením kuličky). Přístup končí hned a ostatní údaje smažeme do 30 dnů. Souhlas s AI službami odvoláte v Účtu → Soukromí, poznávání hlasu v Účtu → Hlas.</p>
+
+    <h2>Vaše práva</h2>
+    <p>Můžete požádat o přístup ke svým údajům, jejich opravu, výmaz, omezení zpracování nebo přenesení a můžete vznést námitku. Stačí napsat na <a href="mailto:ivo@ivosobotka.com">ivo@ivosobotka.com</a>. Pokud nebudete spokojeni, můžete se obrátit na Úřad pro ochranu osobních údajů (uoou.gov.cz).</p>
+
+    <h2 lang="en">Summary in English</h2>
+    <div lang="en">
+    <p>Jarvis is an internal, invite-only voice assistant for the team of Ivo Sobotka (controller, contact above). We process: account data (name, invited work e-mail, Sign in with Apple/Google identifier, role), an optional phone number, device name/model, public device keys and push token; what you say or type to Jarvis, its answers and files you send; transcripts and audio recordings of calls (not for the App Review demo account); voice-match scores only if you opt in (the voiceprint stays on your device); operational data without call content; a security log. Location and contacts are used only for the owner's account on iPhone.</p>
+    <p>Only after your explicit consent on the "Jarvis a AI" screen, your voice, messages and the work data you ask about are sent to third-party AI services: Google Gemini (real-time voice and analysis), ElevenLabs (speech-to-text, text-to-speech) and Anthropic Claude (answers). You can withdraw consent at any time in Account → Privacy. Processors (Railway, Google, ElevenLabs, Anthropic, Recall.ai, Apple, Tailscale) act on our behalf under data-processing agreements with protection equal to this policy. No tracking, no advertising, no sale of data.</p>
+    <p>Retention: for the duration of the cooperation. You can delete your account in the app (Account → Delete account); access ends immediately and the remaining data are deleted within 30 days. Requests: <a href="mailto:ivo@ivosobotka.com">ivo@ivosobotka.com</a>.</p>
+    </div>
+
+    <p style="margin-top:40px;color:#6B6B6B">Platné od 19. 10. 2026 (předchozí verze 12. 10. 2026).</p>
+  </div>
+</main>
+<footer class="footer dark" style="padding-bottom:clamp(32px,4vw,48px)">
+  <div class="footer__links"><a href="/jarvis/">Jarvis</a> · <a href="/jarvis/soukromi/">Ochrana soukromí</a> · <a href="/">Hlavní stránka</a></div>
+</footer>
+</body>
+</html>

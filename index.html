@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ivo Sobotka &amp; tým — přivádíme vám zákazníky a lidi</title>
+<meta name="description" content="Natočíme video, najdeme zájemce, zavoláme jim do pár minut a pomůžeme vašemu týmu uzavírat. Pro firmy, které chtějí víc zakázek, prodejů nebo lidí do týmu.">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="canonical" href="https://ivosobotka.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ivosobotka.com/">
+<meta property="og:title" content="Ivo Sobotka &amp; tým">
+<meta property="og:description" content="Neprodáváme reklamu. Přivádíme vám zákazníky a kvalitní lidi.">
+<meta property="og:image" content="https://ivosobotka.com/media/og.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=202610092134">
+<script src="/assets/hovory.js?v=202610092134" defer></script>
+<script src="/assets/app.js?v=202610092134" defer></script>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero dark">
+  <div class="topbar">
+    <span>Ivo Sobotka &amp; tým</span>
+    <nav aria-label="Hlavní">
+      <a class="nav-extra" href="#pruchod">Jak to funguje</a>
+      <a class="nav-extra" href="#vysledky">Výsledky</a>
+      <a href="#kalendar">Domluvit hovor</a>
+    </nav>
+  </div>
+
+  <div class="hero__body">
+    <h1>„Neprodáváme reklamu. Přivádíme vám zákazníky a kvalitní lidi.“</h1>
+    <p class="hero__lead">Natočíme video, najdeme zájemce a zařídíme, aby se jim někdo ozval do pár minut. Pak pomůžeme vašemu týmu uzavírat.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat__num">41+ mil. Kč</div>
+        <div class="stat__txt">prodané byty developerského projektu za první 4 měsíce</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">23 podepsaných smluv</div>
+        <div class="stat__txt">nábor obchodníků do finanční struktury za 3 měsíce</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">335 000 Kč</div>
+        <div class="stat__txt">obrat e-shopu za 3 týdny</div>
+      </div>
+    </div>
+
+    <div class="hero__cta">
+      <a class="btn" href="#kalendar">Domluvit 30 minut</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ DVEŘE ============ -->
+<section class="section light" aria-labelledby="co-potrebujete">
+  <h2 class="h2" id="co-potrebujete">Co potřebujete?</h2>
+  <div class="doors">
+    <button type="button" class="door" data-door="zakazky" aria-pressed="true">
+      <span class="door__title">Víc zakázek</span>
+      <span class="door__sub">developeři, stavitelé domů, služby</span>
+      <span class="door__picked">vybráno</span>
+    </button>
+    <button type="button" class="door" data-door="prodeje" aria-pressed="false">
+      <span class="door__title">Víc prodejů</span>
+      <span class="door__sub">značky, e-shopy, kamenné prodejny</span>
+      <span class="door__picked">vybráno</span>
+    </button>
+    <button type="button" class="door" data-door="lidi" aria-pressed="false">
+      <span class="door__title">Víc lidí do týmu</span>
+      <span class="door__sub">finanční poradenství, obchodní týmy</span>
+      <span class="door__picked">vybráno</span>
+    </button>
+  </div>
+</section>
+
+<!-- ============ PRŮCHOD ============ -->
+<section class="walk" id="pruchod" aria-labelledby="pruchod-h">
+  <div class="clock-wrap" aria-hidden="true">
+    <div class="clock" id="clock"><span>00:00</span></div>
+  </div>
+
+  <div class="walk__head">
+    <h2 id="pruchod-h">Prvních 10 minut jednoho vašeho zájemce</h2>
+  </div>
+
+  <div class="stop" data-stop="1">
+    <div class="stop__text">
+      <div class="stop__time" data-d="0">00:00</div>
+      <p class="stop__p" data-t="0"></p>
+    </div>
+    <div class="phone-wrap">
+      <div class="iphone">
+        <div class="iphone__screen">
+          <video id="feed-video" data-autoplay autoplay muted loop playsinline preload="metadata"></video>
+          <button type="button" class="vmute" aria-label="Zapnout zvuk"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stop" data-stop="2">
+    <div class="stop__text">
+      <div class="stop__time" data-d="1">00:40</div>
+      <p class="stop__p" data-t="1"></p>
+    </div>
+    <div class="form-card" aria-label="Ukázka formuláře">
+      <div class="q"><span class="q__box" aria-hidden="true">✓</span><span class="q__text"><span class="q__q"></span><span class="q__a"></span></span></div>
+      <div class="q"><span class="q__box" aria-hidden="true">✓</span><span class="q__text"><span class="q__q"></span><span class="q__a"></span></span></div>
+      <div class="q"><span class="q__box" aria-hidden="true">✓</span><span class="q__text"><span class="q__q"></span><span class="q__a"></span></span></div>
+      <div class="q"><span class="q__box" aria-hidden="true">✓</span><span class="q__text"><span class="q__q"></span><span class="q__a"></span></span></div>
+    </div>
+  </div>
+
+  <div class="stop" data-stop="3">
+    <div class="stop__text">
+      <div class="stop__time" data-d="2">09:40</div>
+      <p class="stop__mid" data-t="2"></p>
+      <div class="stop__note">Většina firem se ozve za hodiny. Ve studii Harvard Business Review to bylo v průměru 42 hodin.</div>
+    </div>
+    <div class="call" id="call">
+      <div class="call__head"><span class="call__ring">Příchozí hovor</span></div>
+      <div class="call__actions">
+        <button type="button" class="call__btn" id="call-accept">Přijmout</button>
+        <button type="button" class="call__btn call__btn--ghost" id="call-hangup" hidden>Zavěsit</button>
+        <button type="button" class="call__btn call__btn--ghost" id="call-again" hidden>Pustit znovu</button>
+      </div>
+      <div id="call-progress" hidden>
+        <div class="call__bar"><i id="call-bar"></i></div>
+        <div class="call__time"><span></span><span id="call-time">0:00</span></div>
+      </div>
+      <div class="call__lines" id="call-lines" aria-live="polite"></div>
+      <div class="call__hint">Ukázkové hlasy. Ve skutečnosti volají živí obchodníci, které sami školíme.</div>
+    </div>
+  </div>
+
+  <div class="stop stop--short" data-stop="4">
+    <div class="stop__time" data-d="3">DEN 2</div>
+    <p class="stop__big" data-t="3"></p>
+  </div>
+
+  <div class="stop stop--light" data-stop="5">
+    <div class="stop__text">
+      <div class="stop__time" data-d="4">DEN 14</div>
+      <p class="stop__big" data-t="4"></p>
+    </div>
+    <div class="stop__aside" data-n5></div>
+  </div>
+
+  <div class="reveal" data-stop="6">
+    <div class="reveal__grid">
+      <p data-t="5"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VÝSLEDKY ============ -->
+<section class="section light" id="vysledky" aria-labelledby="vysledky-h">
+  <h2 class="h2" id="vysledky-h">Výsledky</h2>
+  <div class="results">
+    <article class="result">
+      <div class="result__num">přes 41 mil. Kč</div>
+      <p>Prodané byty developerského projektu v Praze za první 4 měsíce.</p>
+    </article>
+    <article class="result">
+      <div class="result__num">600 000 Kč</div>
+      <p>V přímém prodeji vzdělávacího kurzu.</p>
+    </article>
+    <article class="result">
+      <div class="result__num">850 000 Kč</div>
+      <p>Za první 3 měsíce spolupráce s úplně novou autoškolou.</p>
+    </article>
+    <article class="result">
+      <div class="result__num">23 podepsaných smluv</div>
+      <p>Nábor obchodníků do finanční struktury za 3 měsíce. Jedna smlouva za 5 697 Kč.</p>
+    </article>
+  </div>
+  <div class="showcase" id="ukazky">
+    <div class="showcase__text">
+      <h3 class="showcase__h">Takhle vypadají videa, která točíme.</h3>
+      <div class="showcase__tabs" id="showcase-tabs" role="tablist" aria-label="Ukázky videí"></div>
+    </div>
+    <div class="phone-wrap">
+      <div class="iphone">
+        <div class="iphone__screen">
+          <video id="showcase-video" data-autoplay muted playsinline preload="none"></video>
+          <button type="button" class="vmute" aria-label="Zapnout zvuk"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O MNĚ ============ -->
+<section class="section dark" id="o-mne" aria-labelledby="o-mne-h">
+  <div class="about">
+    <div class="about__media about__media--video">
+      <video id="o-mne-video" data-autoplay muted loop playsinline preload="none" poster="/media/o-mne.jpg">
+        <source src="/media/o-mne.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="vmute" aria-label="Zapnout zvuk"></button>
+    </div>
+    <div>
+      <h2 id="o-mne-h">Nejsme agentura. Jsem Ivo Sobotka a mám tým, který za výsledek odpovídá stejně jako já.</h2>
+      <div class="about__story">
+        <p><strong>V šestnácti jsem odletěl na rok do Ameriky.</strong> Bez plánu, bez peněz a s minimální znalostí angličtiny.</p>
+        <p>Viděl jsem tam firmy, které díky online prodeji vystřelily nahoru. Jednou večer jsem usínal a nešlo mi to z hlavy: tohle by měla umět každá firma s kvalitním produktem.</p>
+        <p>Začal jsem studovat, jak americké firmy vyhrávají, a rok jsem působil v marketingovém týmu amerického startupu. To know-how jsem pak přenesl na český trh, abych pomáhal malým, středním i větším firmám reálně škálovat. S měřitelnými výsledky a jasnou návratností investice.</p>
+        <p>Proto stavíme na vztazích a klienty si vybíráme. Dnes pracujeme na projektech za desítky milionů.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOTKY: skryté, dokud Ivo nedodá profesionální fotky (prace-1…4.jpg) -->
+  <div class="work" hidden>
+    <figure>
+      <div class="work__img"><img data-src="/media/prace-1.jpg" alt="Natáčení videa s majitelem firmy" loading="lazy"></div>
+      <figcaption>natáčíme</figcaption>
+    </figure>
+    <figure>
+      <div class="work__img"><img data-src="/media/prace-2.jpg" alt="Telefonát se zájemcem" loading="lazy"></div>
+      <figcaption>voláme</figcaption>
+    </figure>
+    <figure>
+      <div class="work__img"><img data-src="/media/prace-3.jpg" alt="Výsledky kampaně" loading="lazy"></div>
+      <figcaption>měříme</figcaption>
+    </figure>
+    <figure>
+      <div class="work__img"><img data-src="/media/prace-4.jpg" alt="Školení obchodníků" loading="lazy"></div>
+      <figcaption>učíme prodávat</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ JAK SPOLUPRÁCE PROBÍHÁ ============ -->
+<section class="section light" aria-labelledby="jak-h">
+  <h2 class="h2" id="jak-h">Jak spolupráce probíhá</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step__n">01</div>
+      <div class="step__t">Úvodní hovor</div>
+      <p class="step__d">Projdeme, co prodáváte a kde to drhne. Řekneme rovnou, jestli vám umíme pomoct, případně vás odkážeme správným směrem.</p>
+      <div class="step__when">30 minut</div>
+    </div>
+    <div class="step">
+      <div class="step__n">02</div>
+      <div class="step__t">Hloubkový audit a strategie</div>
+      <p class="step__d">Marketing je zesilovač dobře fungujícího byznysu. Proto je pro nás klíčové pochopit, co se děje na pozadí.</p>
+      <div class="step__when">do 2 týdnů</div>
+    </div>
+    <div class="step">
+      <div class="step__n">03</div>
+      <div class="step__t">Doručení výsledků</div>
+      <p class="step__d">Videa, reklamní kampaně, formuláře, CRM, skripty a provolávání. První poptávky chodí do pár dní.</p>
+      <div class="step__when">do 3 týdnů od začátku</div>
+    </div>
+    <div class="step">
+      <div class="step__n">04</div>
+      <div class="step__t">Reálné škálování</div>
+      <p class="step__d">Ladíme podle čísel a přidáváme tam, kde to vydělává.</p>
+      <div class="step__when">průběžně</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRO KOHO TO NENÍ ============ -->
+<section class="section dark" aria-labelledby="neni-h">
+  <div class="label" id="neni-h" style="margin-bottom:clamp(28px,4vw,48px)">Pro koho to není</div>
+  <div class="notfor">
+    <p>Nemáte kapacitu zvedat telefony a jezdit na schůzky.</p>
+    <p>Chcete jen nějakou reklamu, ne odpovědnost za výsledek.</p>
+    <p>Nechcete ukázat tvář firmy. Naše kampaně stojí na člověku, ne na logu.</p>
+  </div>
+</section>
+
+<!-- ============ OTÁZKY ============ -->
+<section class="section light" aria-labelledby="otazky-h">
+  <h2 class="h2" id="otazky-h">Otázky</h2>
+  <div class="faq">
+    <details>
+      <summary>„Z Facebooku nám chodí balast.“</summary>
+      <p>Proto to neděláme přes obyčejný formulář. Zájemce odpoví na pár krátkých otázek a většina nevhodných odpadne dřív, než vám zabere čas. Zbytek dostane telefon do pár minut.</p>
+    </details>
+    <details>
+      <summary>„Nemám čas se o to starat.“</summary>
+      <p>Vy obsluhujete zákazníky, děláte schůzky a podpisy. Video, kampaň, formulář, CRM i skripty jsou na nás.</p>
+    </details>
+    <details>
+      <summary>„Už s někým spolupracujeme.“</summary>
+      <p>Dobře. Kolik obchodů vám z toho vyšlo za poslední dva měsíce? Když to sedí, nemáte důvod nic měnit.</p>
+    </details>
+    <details>
+      <summary>„Kolik to stojí?“</summary>
+      <p>Investice se vždy odvíjí od plánovaného zisku. Nikdy s vámi nepůjdeme do spolupráce, kde byste neměli měřitelnou návratnost. Počítejte s celkovou investicí od 60 000 Kč měsíčně.</p>
+    </details>
+    <details>
+      <summary>„Co když to nevyjde?“</summary>
+      <p>Výsledky si jsme jistí, a proto rádi jdeme s kůží na trh. Často se podílíme na zisku, který vám přivedeme, a ve výjimečných případech výsledek i garantujeme. Co dává smysl u vás, domluvíme na hovoru.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ KALENDÁŘ ============ -->
+<section class="section dark" id="kalendar" aria-labelledby="kalendar-h">
+  <div class="book">
+    <h2 id="kalendar-h">Překvapí vás, co všechno o svém byznysu nevíte.</h2>
+    <div class="book__cal">
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/fUvroeZYODjLY2ySn0Sx" id="fUvroeZYODjLY2ySn0Sx_booking" title="Rezervace analýzy s marketingovým expertem" scrolling="no"></iframe>
+      <noscript><div class="book__fallback"><a href="https://api.leadconnectorhq.com/widget/booking/fUvroeZYODjLY2ySn0Sx">Otevřít rezervační kalendář</a></div></noscript>
+    </div>
+    <a class="book__phone" href="tel:+420775014602">nebo zavolejte +420 775 014 602</a>
+    <!-- FOTKA Iva: skrytá, dokud nedodá profesionální (ivo.jpg) -->
+    <div class="book__photo" hidden><img data-src="/media/ivo.jpg" alt="Ivo Sobotka" loading="lazy"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer dark">
+  <div class="footer__addr">Ivo Sobotka, Jeronýmova 1155, 397 01 Písek, IČO 21868069. <a href="mailto:ivo@ivosobotka.com" style="color:inherit;border-bottom-color:#2A2A2A">ivo@ivosobotka.com</a></div>
+  <div class="footer__links">
+    <a href="https://www.instagram.com/ivosobotka/" rel="noopener">Instagram</a>
+    <a href="/ochrana-osobnich-udaju/">Ochrana osobních údajů</a>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="#kalendar">Domluvit hovor</a>
+  <a href="tel:+420775014602">Zavolat</a>
+</div>
+
+<script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
+</body>
+</html>
